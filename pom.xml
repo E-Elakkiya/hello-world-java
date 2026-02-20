@@ -9,8 +9,22 @@
     <artifactId>hello-world-java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- Specify Java version -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
     <build>
         <plugins>
+            <!-- Compile Java code -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+            </plugin>
+
+            <!-- Package JAR with main class -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
